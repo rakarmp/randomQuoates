@@ -10,7 +10,7 @@ app.get("/docs", (req, res) => {
   res.render("docs.ejs");
 });
 
-const { quotes, kataBijak } = require("./lib/data");
+const { quotes, kataBijak } = require("./src/lib/data");
 
 app.get("/quote", (req, res) => {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];

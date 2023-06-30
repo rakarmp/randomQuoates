@@ -12,7 +12,7 @@ app.get("/docs", (req, res) => {
 
 const { quotes, kataBijak } = require("./lib/data");
 
-app.get("/quoate", (req, res) => {
+app.get("/quote", (req, res) => {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
   res.json({ quotes: randomQuote });
 });

@@ -2,12 +2,14 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+app.use(express.static("views"));
+
 app.get("/", (req, res) => {
-  res.render("home.ejs");
+  res.sendFile(__dirname + "/views/home.html");
 });
 
 app.get("/docs", (req, res) => {
-  res.render("docs.ejs");
+  res.sendFile(__dirname + "/views/docs.html");
 });
 
 const { quotes, kataBijak } = require("./src/lib/data");

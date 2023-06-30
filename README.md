@@ -25,9 +25,3 @@ bashCopy code
 ```
 
 API "Random Quote" memungkinkan Anda mendapatkan kutipan acak dari berbagai sumber yang terdapat dalam daftar kutipan. Anda dapat menggunakan endpoint `GET /quote` untuk meminta kutipan acak. Respons akan berisi kutipan dengan format teks dalam properti `"quote"`.
-
-Gunakan API ini untuk mendapatkan inspirasi dan membagikan kutipan-kutipan yang bermakna kepada pengguna Anda.
-
-Jika Anda memiliki pertanyaan lebih lanjut tentang API ini, jangan ragu untuk menghubungi kami.
-
-Terima kasih telah menggunakan API "Random Quote"!

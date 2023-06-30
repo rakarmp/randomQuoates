@@ -22,8 +22,13 @@ app.get("/katabijak", (req, res) => {
   res.json({ "kata bijak": randomBijak });
 });
 
-app.listen(port, () => {
-  console.log(`server is running on port ${port}`);
+app.listen(port, (err, res) => {
+  if (err) {
+    console.log(err);
+    return res.status(500).send(err.message);
+  } else {
+    console.log(`[INFO] server is running on port: ${port}`);
+  }
 });
 
 module.exports = app;

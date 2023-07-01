@@ -26,7 +26,7 @@ app.get("/quote", (req, res) => {
 app.get("/katabijak", (req, res) => {
   const randomBijak = kataBijak[Math.floor(Math.random() * kataBijak.length)];
   const no = Math.floor(Math.random() * kataBijak.length);
-  res.json({ no: no, "kata bijak": randomBijak });
+  res.json({ no: no, katabijak: randomBijak });
 });
 
 app.listen(port, (err, res) => {

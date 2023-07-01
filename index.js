@@ -19,12 +19,14 @@ const { quotes, kataBijak } = require("./src/lib/data");
 
 app.get("/quote", (req, res) => {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  res.json({ quotes: randomQuote });
+  const no = Math.floor(Math.random() * quotes.length);
+  res.json({ no: no, quotes: randomQuote });
 });
 
 app.get("/katabijak", (req, res) => {
   const randomBijak = kataBijak[Math.floor(Math.random() * kataBijak.length)];
-  res.json({ "kata bijak": randomBijak });
+  const no = Math.floor(Math.random() * kataBijak.length);
+  res.json({ no: no, "kata bijak": randomBijak });
 });
 
 app.listen(port, (err, res) => {

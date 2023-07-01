@@ -15,15 +15,19 @@ app.get("/docs", (req, res) => {
   res.sendFile(__dirname + "/views/docs.html");
 });
 
-const { quotes, kataBijak } = require("./src/lib/data");
+const { quotes, kataBijak, newObject } = require("./src/lib/data");
 
-app.get("/quote", (req, res) => {
+app.get("/api", (req, res) => {
+  res.json(newObject);
+});
+
+app.get("/api/quote", (req, res) => {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
   const no = Math.floor(Math.random() * quotes.length);
   res.json({ no: no, quotes: randomQuote });
 });
 
-app.get("/katabijak", (req, res) => {
+app.get("/api/katabijak", (req, res) => {
   const randomBijak = kataBijak[Math.floor(Math.random() * kataBijak.length)];
   const no = Math.floor(Math.random() * kataBijak.length);
   res.json({ no: no, katabijak: randomBijak });

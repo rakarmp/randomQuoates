@@ -1,3 +1,14 @@
+const newObject = {
+  title: "Welcome to randomQuotes API",
+  description:
+    "Random Quotes Adalah Sekumpulan Kata Tersimpan Yang Dimuat Secara Acak, Dibuat Menggunakan ExpressJS",
+  endpoint: {
+    quote: "[GET] /api/quote",
+    katabijak: "[GET] /api/katabijak",
+  },
+  parameter: "tidak ada parameter yang diperlukan.",
+};
+
 const quotes = [
   "The only way to do great work is to love what you do. - Steve Jobs",
   "Innovation distinguishes between a leader and a follower. - Steve Jobs",
@@ -88,4 +99,5 @@ const kataBijak = [
 module.exports = {
   quotes,
   kataBijak,
+  newObject,
 };

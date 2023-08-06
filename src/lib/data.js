@@ -96,8 +96,20 @@ const kataBijak = [
   "Ketika kamu melakukan sesuatu yang mulia serta indah akan tetapi tidak ada satu orang pun yang memerhatikan, maka jangan merasa sedih. Sebab matahari pun mampu tampil cantik setiap pagi hari meskipun sebagian besar penontonnya masih tertidur. – John Lennon.",
 ];
 
+const quoteSteveJobs = [
+  "Hal-hal favorit saya dalam hidup tidak memerlukan biaya. Sangat jelas bahwa sumber daya paling berharga yang kita semua miliki adalah waktu.",
+  "Ketika Anda pertama kali mencoba memecahkan masalah, solusi pertama yang Anda temukan sangat rumit, dan kebanyakan orang berhenti di situ. Tetapi jika Anda terus berjalan, dan hidup dengan masalah dan mengupas lebih banyak lapisan bawang, seringkali Anda dapat menemukan beberapa solusi yang sangat elegan dan sederhana. Kebanyakan orang tidak meluangkan waktu atau energi untuk mencapainya. Kami percaya bahwa pelanggan cerdas, dan menginginkan objek yang dipikirkan dengan matang.",
+  
+]
+
+const tagSteveJobs = [
+  "Steve Jobs",
+]
+
 module.exports = {
   quotes,
   kataBijak,
   newObject,
+  quoteSteveJobs,
+  tagSteveJobs
 };

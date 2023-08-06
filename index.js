@@ -15,17 +15,29 @@ app.get("/docs", (req, res) => {
   res.sendFile(__dirname + "/views/docs.html");
 });
 
-const { quotes, kataBijak, newObject } = require("./src/lib/data");
+const { quotes, kataBijak, newObject, quoteSteveJobs, tagSteveJobs } = require("./src/lib/data");
 
 app.get("/api", (req, res) => {
   res.json(newObject);
 });
+
 
 app.get("/api/quote", (req, res) => {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
   const no = Math.floor(Math.random() * quotes.length);
   res.json({ no: no, quotes: randomQuote });
 });
+
+app.get("/api/quote/stevejobs", (req, res) => {
+  const randomQuoteSteve = quoteSteveJobs[Math.floor(Math.random() * quoteSteveJobs.length)];
+  const no = Math.floor(Math.random() * quoteSteveJobs.length);
+  const tag = tagSteveJobs
+  res.json({
+    no: no,
+    quotes: randomQuoteSteve,
+    tag: tag
+  })
+})
 
 app.get("/api/katabijak", (req, res) => {
   const randomBijak = kataBijak[Math.floor(Math.random() * kataBijak.length)];
